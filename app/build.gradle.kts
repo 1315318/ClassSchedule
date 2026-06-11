@@ -35,21 +35,6 @@ android {
         }
     }
 
-    signingConfigs {
-        create("release") {
-            // 签名信息从 gradle.properties 或环境变量读取，不写死
-            storeFile = file(project.findProperty("RELEASE_STORE_FILE") as String? ?: "../release.jks")
-            storePassword = project.findProperty("RELEASE_STORE_PASSWORD") as String? ?: ""
-            keyAlias = project.findProperty("RELEASE_KEY_ALIAS") as String? ?: "release"
-            keyPassword = project.findProperty("RELEASE_KEY_PASSWORD") as String? ?: ""
-        }
-    }
-    buildTypes {
-        getByName("release") {
-            signingConfig = signingConfigs.getByName("release")
-        }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
