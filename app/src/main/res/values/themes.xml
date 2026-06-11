@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 极简课表 - 原生主题（作为 Compose 的容器） -->
+<resources>
+    <style name="Theme.ClassSchedule" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- 状态栏透明，由 Compose 处理颜色 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
