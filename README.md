@@ -78,4 +78,4 @@ APK 生成位置：`app/build/outputs/apk/debug/app-debug.apk`
 
 ## 许可
 
-MIT License
+GPL V3 License
