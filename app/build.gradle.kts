@@ -35,6 +35,13 @@ android {
         }
     }
 
+    // Release 使用 debug 签名（适合自用分发，上传 Play Store 需替换为正式签名）
+    buildTypes {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
